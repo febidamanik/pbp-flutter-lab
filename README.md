@@ -8,7 +8,7 @@
 
 <h3> Kelas 	: D </h3>
 
-# 🔍Stateless widget dan stateful widget🔍
+# 💫Stateless widget dan stateful widget💫
 ✨‣ Stateless _widget_
 
 ➔ Stateless _widget_ adalah _widget_ statis dimana seluruh konfigurasi yang dimuat didalamnya telah diinisiasi sejak awal dan tidak dapat diubah setelah widget tersebut dibuat. Contoh : IconButton dan Text
@@ -33,7 +33,7 @@ Berikut tabel yang menampilkan perbedaan antara keduanya.
  		<td>Bersifat dinamis (dapat berubah)</td>
   <tr>
 		<td>Tidak memiliki state, cocok untuk wigdet tanpa perubahan data</td>
-		<td>Memiliki state, cocok untuk menyusun _widget_ dengan pengolahan data yang interaktif</td>
+		<td>Memiliki state, cocok untuk menyusun widget dengan pengolahan data yang interaktif</td>
   <tr>
 		<td>Cara kerja dengan konsep Constructor🠚Build</td>
 		<td>Cara kerja dengan konsep Constructor🠚Internal State🠚Build</td>
