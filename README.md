@@ -74,9 +74,9 @@ Berikut tabel yang menampilkan perbedaan antara keduanya.
 # 🧮Fungsi dari setState()🧮
 Pemanggilan fungsi `setState()` berfungsi untuk memberitahu _widget_ bahwa ada objek yang berubah pada State sehingga aplikasi akan memanggil method build() serta memuat ulang _widget_ tersebut dengan nilai yang sudah diubah. Variabel yang dapat terdampak adalah variabel/data yang di-pass sebagai argumen pada inner function setState().
 Pada aplikasi counter_7, fungsi setState() berpengaruh pada variabel counter.
-- Dalam hal ini, saat tombol + (increment) diklik terdapat pemanggilan fungsi `setState()`
+- Dalam hal ini, saat tombol + _(increment)_ diklik terdapat pemanggilan fungsi `setState()`
 - Method `_incrementCounter` akan dijalankan `onPressed: _incrementCounter` untuk menambahkan variabel counter sebanyak satu satuan.
-- Dalam hal ini, saat tombol - (decrement) diklik terdapat pemanggilan fungsi `setState()`
+- Dalam hal ini, saat tombol - _(decrement)_ diklik terdapat pemanggilan fungsi `setState()`
 - Method `_decrementCounter` akan dijalankan `onPressed: _decrementCounter` untuk mengurangi variabel counter sebanyak satu satuan.
 
 # 📊Perbedaan antara const dengan final📊
