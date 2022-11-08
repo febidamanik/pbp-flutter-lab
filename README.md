@@ -50,7 +50,7 @@ Berikut tabel yang menampilkan perbedaan antara keduanya.
 </body>
 </html>
 
-# 👷‍♀️Widget yang digunakan di proyek beserta fungsinya👷‍♀️
+# 👷‍♀️Widget yang digunakan di proyek serta fungsinya👷‍♀️
 ◽ `MaterialApp` → Mengatur segala route dan theme dari aplikasi
 
 ◽ `Appbar` → Menampilkan title dan item menu item pop up berserta aksi nya
@@ -95,7 +95,7 @@ Pada aplikasi counter_7, fungsi setState() berpengaruh pada variabel counter.
  		<td>Tidak dapat inisialisasi ulang sehingga variabel bernilai tetap dari awal deklarasi</td>
   <tr>
 		<td>Pada saat kompilasi berjalan, nilai dari variabel tersebut harus sudah diberikan value secara langsung</td>
-		<td>Pada saat kompilasi nilai variabel belum diketahui secara langsung, variabelnya sudah di inialisiasi namun nilainya akan didapatkan saat kompilasi dijalankan</td>
+		<td>Pada saat kompilasi berjalan, nilai dari variabel belum diketahui secara langsung, variabelnya sudah di inialisiasi namun nilainya akan didapatkan saat kompilasi dijalankan</td>
   <tr>
 		<td>
 		void main() {
