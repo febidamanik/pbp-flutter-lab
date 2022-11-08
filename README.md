@@ -171,7 +171,7 @@ void _decrementCounter() {
 **◻Tambahan Implementasi Bonus◻**
 
 ◽ ☑ Menyembunyikan/menghilangkan tombol - apabila counter bernilai 0.
-- Membuat `if conditional` apabila counter 0 agar button minus menghilang sementara selain dari itu tombol yang ditampilkan adalah tombol + dan -
+- Membuat `if conditional` apabila counter 0 agar button minus menghilang sementara selain dari itu tombol yang ditampilkan adalah tombol + dan -.
 ```dart 
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(left: 30.0),
