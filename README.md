@@ -277,6 +277,51 @@ Dengan demikian, pengguna dapat berpindah pada halaman sebelumnya dengan operasi
 # 📌Pengimplementasian checklists dari tasks📌
 - Menambahkan file `budget.dart`, `data.dart`, `drawer.dart`, dan `form.dart` pada folder `lib`.
 
+- Menambahkan tiga tombol navigasi pada drawer/hamburger untuk ke halaman counter, halaman form, dan halaman yang menampilkan data budget yang telah di-input melalui form pada file `drawer.dart`.
+
+```Dart
+  Widget buildMenuItems(BuildContext context) => Container(
+      padding: const EdgeInsets.all(24),
+      child: Wrap(
+        runSpacing: 12,
+        children: [
+          ListTile(
+            title: const Text('counter_7'),
+            onTap: () {
+              // Route menu ke halaman utama
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const MyHomePage()));
+            },
+          ),
+          ListTile(
+            title: const Text('Tambah Budget'),
+            onTap: () {
+              // close navigation drawer before
+              Navigator.pop(context);
+              // Route menu ke halaman form
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const MyFormPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Data Budget'),
+            onTap: () {
+              // close navigation drawer before
+              Navigator.pop(context);
+              // Route menu ke halaman data budget
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const MyDataPage()),
+              );
+            },
+          ),
+        ],
+      ));
+}
+```
+
+- Membuat widget Drawer di file `drawer.dart` yang berisi tombol navigasi untuk ke halaman counter_7, Tambah Budget, dan Data Budget yang menampilkan data yang telah dimasukkan oleh user di halaman form. Widget Drawer ini diimplementasikan menggunakan stateless widget.
+
 - Menambahkan models pada file baru `budget.dart` dimana terdapat inisialisasi array list budgets.
 
 ```Dart
@@ -312,8 +357,6 @@ class Budget {
 
 - Menambahkan file baru `data.dart` untuk menampilkan data budget yang telah di-input melalui form dan disimpan dalam array list budgets.
 
-- Membuat widget Drawer di file `drawer.dart` yang berisi tombol navigasi untuk ke halaman counter_7, Tambah Budget, dan Data Budget yang menampilkan data yang telah dimasukkan oleh user di halaman form. Widget Drawer ini diimplementasikan menggunakan stateless widget.
-
 - Menambahkan file baru `form.dart` untuk membuat Form dan Elemen Input. Di halaman form, terdapat widget input name, amount, type, date, dan button untuk submit form.
 
 - Membuat tombol yang menyimpan data tersebut di dalam array list budgets setelah ditekan.
@@ -341,7 +384,9 @@ class Budget {
 	});
       }),
 ```
+
 ◽ ✅ Menampilkan elemen date (format bebas) pada setiap elemen budget yang ada pada halaman data budget.
+
 ```Dart
   child: ListTile(
       title: Text("${budget.name}\n${budget.amount}"),
@@ -350,7 +395,9 @@ class Budget {
 );
 }).toList(),
 ```
+
 ◽ ✅ Refactor widget Drawer ke sebuah file terpisah.
+
 ```Dart
 Widget build(BuildContext context) => Drawer(
       child: SingleChildScrollView(
