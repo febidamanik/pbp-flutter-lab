@@ -193,3 +193,171 @@ void _decrementCounter() {
   }
 }
 ```
+============================================================================================
+<div align="center" style="padding-bottom: 10px">
+<h1>🔖Tugas 8: Flutter Form🔖</h1>
+</div>
+
+<h3> Nama	: Febi Claudia Damanik </h3>
+
+<h3> NPM	: 2106751884 </h3>
+
+<h3> Kelas 	: D </h3>
+
+# ⚜Navigator.push dan Navigator.pushReplacement⚜
+🧭‣ Navigator.push
+
+➔ Navigator.push adalah suatu metode yang digunakan untuk menambahkan route lain ke atas tumpukan screen saat ini dimana halaman baru ditampilkan di atas halaman sebelumnya.
+
+🧭‣ Navigator.pushReplacement
+
+➔ Navigator.pushReplacement adalah suatu metode yang digunakan untuk memindahkan atau mengubah route pada navigator yang terikat pada context yang bersangkutan dengan melakukan push page baru dan menghapus atau menghilangkan page/routing lama atau yang sebelumnya digunakan.
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body> 
+ <table>
+ <tr>
+ 	<td align="center">🎇Perbedaan antara Navigator.push() dan Navigator.pushReplacement()🎇</td>
+<tr>
+<td>Navigator.push() hanya melakukan penambahan route pada stack dan memindahkan ke page baru tersebut, tetapi tidak menghilangkan page/route yang lama. Berbeda halnya dengan Navigator.pushReplacement() akan memindahkan page/route ke page/route baru dan menghilangkan page/route yang lama sehingga tidak dapat berpindah ke halaman sebelumnya.</td>
+</tr>
+	 
+</table>
+
+</body>
+</html>
+
+# 👷🏻‍♀️Widget yang digunakan di proyek beserta fungsinya👷🏻‍♀️
+◽ `Card` → Mengatur info terkait menjadi title, subtitle, dan leading ke dalam kotak dengan sudut membulat dan efek bayangan di tepi.
+
+◽ `Drawer` → Membuat fitur navigasi menuju page lain berupa drawer di sisi kiri layar.
+
+◽ `DropdownButton` → Menampilkan objek berupa pemilihan opsi dalam fitur dropdown.
+
+◽ `Dialog` → Menampilkan pop up window pada halaman aplikasi.
+	
+◽ `Expanded` → Mengatur ukuran *child* widgetnya mengisi tempat yang tersedia.
+	
+◽ `Form` → Menyisipkan fitur Form yang menerima input dari pengguna.
+
+◽ `ListView` → Menampilkan widget-widget lain yang menjadi *child*-nya.
+
+◽ `Padding` → Mengatur padding pada widget yang menjadi *child*-nya.
+
+◽ `SizedBox` → Mengatur jarak antara satu widget dengan widget lain.
+
+◽ `TextButton` → Menyisipkan sebuah button yang dapat diberi tulisan untuk menampilkan date picker dan submit form.
+	
+◽ `TextFormField` → Menyisipkan objek berupa input name dan amount sebagai field bagi pengguna untuk memasukkan teks.
+
+# ⛲Jenis-jenis event yang ada pada Flutter⛲
+🔹 onTap: event yang terjadi ketika widget di-tap.
+
+🔹 onFocusChange: pemanggilan properti function saat fokus berubah.
+
+🔹 onPressed: pemanggilan properti function dimana terdapat event yang di-trigger ketika sebuah tombol ditekan, biasanya ada pada widget jenis Button.
+
+🔹 onSaved: pemanggilan properti function dimana terdapat event yang di-trigger ketika sebuah form disimpan, biasanya ada pada widget jenis input/form.
+
+🔹 onChanged: pemanggilan properti function dimana terdapat event yang di-trigger ketika terjadi sebuah perubahan pada sebuah widget, biasanya ada pada widget jenis input/form.
+
+# 🌐Cara kerja Navigator dalam "mengganti" halaman🌐
+Navigator adalah salah satu widget yang berfungsi menampilkan konten ke halaman atau layar baru. Pada saat pengimplementasian navigasi halaman pada Flutter memanfaatkan struktur data stack. Dalam hal ini, biasanya widget Navigator di Flutter digunakan untuk mempertahankan tumpukan stack dan berperan dalam mengatur stack of route. Method yang digunakan pada objek Navigator, seperti:
+- `Method push` untuk menimpa halaman sebelumnya.
+- `Method pop` untuk kembali ke halaman sebelumnya dengan menghapus halaman sekarang.
+- `Method pushReplacement` akan mengganti halaman yang baru dan pop untuk kembali ke halaman sebelumnya dengan menghapus halaman sekarang. 
+
+Dengan demikian, pengguna dapat berpindah pada halaman sebelumnya dengan operasi ini.
+
+# 📌Pengimplementasian checklists dari tasks📌
+- Menambahkan file `budget.dart`, `data.dart`, `drawer.dart`, dan `form.dart` pada folder `lib`.
+
+- Menambahkan models pada file baru `budget.dart` dimana terdapat inisialisasi array list budgets.
+
+```Dart
+class Budget {
+  static List<Budget> budgets = [];
+  String name;
+  int amount;
+  String type;
+  DateTime date;
+
+  Budget({
+    required this.name,
+    required this.amount,
+    required this.type,
+    required this.date,
+  });
+
+  static void addBudget({
+    required name,
+    required amount,
+    required type,
+    required date,
+  }) {
+    budgets.add(Budget(
+      name: name,
+      amount: amount,
+      type: type,
+      date: date,
+    ));
+  }
+}
+```
+
+- Menambahkan file baru `data.dart` untuk menampilkan data budget yang telah di-input melalui form dan disimpan dalam array list budgets.
+
+- Membuat widget Drawer di file `drawer.dart` yang berisi tombol navigasi untuk ke halaman counter_7, Tambah Budget, dan Data Budget yang menampilkan data yang telah dimasukkan oleh user di halaman form. Widget Drawer ini diimplementasikan menggunakan stateless widget.
+
+- Menambahkan file baru `form.dart` untuk membuat Form dan Elemen Input. Di halaman form, terdapat widget input name, amount, type, date, dan button untuk submit form.
+
+- Membuat tombol yang menyimpan data tersebut di dalam array list budgets setelah ditekan.
+
+- Menjalankan proyek program Flutter dengan `flutter run` pada `cmd`.
+
+- Melakukan `add-commit-push` proyek ke repositori `pbp-flutter-lab`.
+
+**◻Tambahan Implementasi Bonus◻**
+
+◽ ✅ Menambahkan elemen date picker pada halaman form.
+
+```Dart
+    TextButton(
+      onPressed: (() {
+	showDatePicker(
+	  context: context,
+	  initialDate: DateTime.now(),
+	  firstDate: DateTime(2000),
+	  lastDate: DateTime(2999),
+	).then((value) {
+	  setState(() {
+	    _date = value;
+	  });
+	});
+      }),
+```
+◽ ✅ Menampilkan elemen date (format bebas) pada setiap elemen budget yang ada pada halaman data budget.
+```Dart
+  child: ListTile(
+      title: Text("${budget.name}\n${budget.amount}"),
+      subtitle: Text(budget.date.toString().split(' ')[0]),
+      trailing: Text(budget.type)),
+);
+}).toList(),
+```
+◽ ✅ Refactor widget Drawer ke sebuah file terpisah.
+```Dart
+Widget build(BuildContext context) => Drawer(
+      child: SingleChildScrollView(
+        child: Column(
+           crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              buildMenuItems(context),
+            ]),
+      ),
+    );
+```
