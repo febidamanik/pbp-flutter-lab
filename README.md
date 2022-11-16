@@ -232,27 +232,27 @@ void _decrementCounter() {
 </html>
 
 # 👷🏻‍♀️Widget yang digunakan di proyek beserta fungsinya👷🏻‍♀️
-◽ `Card` → Mengatur info terkait menjadi title, subtitle, dan leading ke dalam kotak dengan sudut membulat dan efek bayangan di tepi.
+◽ `Card` → Mengatur info terkait menjadi title, subtitle, dan leading ke dalam kotak dengan sudut membulat dan efek bayangan di tepi
 
-◽ `Drawer` → Membuat fitur navigasi menuju page lain berupa drawer di sisi kiri layar.
+◽ `Drawer` → Membuat fitur navigasi menuju page lain berupa drawer di sisi kiri layar
 
-◽ `DropdownButton` → Menampilkan objek berupa pemilihan opsi dalam fitur dropdown.
+◽ `DropdownButton` → Menampilkan objek berupa pemilihan opsi dalam fitur dropdown
 
-◽ `Dialog` → Menampilkan pop up window pada halaman aplikasi.
+◽ `Dialog` → Menampilkan pop up window pada halaman aplikasi
 	
-◽ `Expanded` → Mengatur ukuran *child* widgetnya mengisi tempat yang tersedia.
+◽ `Expanded` → Mengatur ukuran *child* widgetnya mengisi tempat yang tersedia
 	
-◽ `Form` → Menyisipkan fitur Form yang menerima input dari pengguna.
+◽ `Form` → Menyisipkan fitur Form yang menerima input dari pengguna
 
-◽ `ListView` → Menampilkan widget-widget lain yang menjadi *child*-nya.
+◽ `ListView` → Menampilkan widget-widget lain yang menjadi *child*-nya
 
-◽ `Padding` → Mengatur padding pada widget yang menjadi *child*-nya.
+◽ `Padding` → Mengatur padding pada widget yang menjadi *child*-nya
 
-◽ `SizedBox` → Mengatur jarak antara satu widget dengan widget lain.
+◽ `SizedBox` → Mengatur jarak antara satu widget dengan widget lain
 
-◽ `TextButton` → Menyisipkan sebuah button yang dapat diberi tulisan untuk menampilkan date picker dan submit form.
+◽ `TextButton` → Menyisipkan sebuah button yang dapat diberi tulisan untuk menampilkan date picker dan submit form
 	
-◽ `TextFormField` → Menyisipkan objek berupa input name dan amount sebagai field bagi pengguna untuk memasukkan teks.
+◽ `TextFormField` → Menyisipkan objek berupa input name dan amount sebagai field bagi pengguna untuk memasukkan teks
 
 # ⛲Jenis-jenis event yang ada pada Flutter⛲
 🔹 onTap: event yang terjadi ketika widget di-tap.
