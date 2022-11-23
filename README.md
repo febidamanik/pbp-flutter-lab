@@ -409,3 +409,89 @@ Widget build(BuildContext context) => Drawer(
       ),
     );
 ```
+
+<div align="center" style="padding-bottom: 10px">
+<h1>🔖Tugas 9: Integrasi Web Service pada Flutter🔖</h1>
+</div>
+
+<h3> Nama	: Febi Claudia Damanik </h3>
+
+<h3> NPM	: 2106751884 </h3>
+
+<h3> Kelas 	: D </h3>
+
+# 💾Pengambilan data JSON💾
+💢‣ Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu?
+
+➔ Bisa, pengambilan data JSON tanpa membuat model akan dikirimkan sebagai HTTP Response dalam bentuk raw data. Pengimplementasiannya dapat dilakukan dengan menggunakan `jsonDecode()` *import* dari `dart:convert`. 
+
+💢‣ Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+➔ Pengambilan data JSON tanpa membuat model terlebih dahulu dapat membuat *developer* sulit untuk melihat dan mengakses data tersebut. Dalam hal ini, pembuatan model diperlukan agar *developer* lebih mudah untuk melakukan operasi pada HTTP Response tersebut dengan mengubahnya menjadi dart object. Dengan begitu, sebaiknya pembuatan model dalam pengambilan data JSON dilakukan agar representasi data lebih terstruktur dan efisien. 
+
+# 🐱‍💻Widget yang digunakan di proyek beserta fungsinya🐱‍💻
+Berikut tambahan widget baru yang digunakan di proyek Tugas 9, yaitu :
+
+◽ `Checkbox` → Menampilkan *checkbox* untuk memberi pilihan kepada *user*.
+
+◽ `ElevatedButton` → Membuat *button* memiliki *shadow* dan terlihat menonjol dibandingkan dengan elemen-elemen lainnya dengan desain material Elevation.
+
+◽ `FutureBuilder` → Menampilkan data yang akan diambil dari *web service* yang mendukung proses asinkron.
+
+◽ `Flexible` → Mengatur turunan *widget* agar tampilannya dapat diatur dan bersifat fleksibel pada halaman detail.
+
+◽ `RichText` → Menampilkan teks yang menerapkan beberapa *style* yang bervariasi.
+
+◽ `TextSpan` → Menampung beberapa properti berupa *style* dan spesifikasi *style* lainnya untuk teks pada halaman detail.
+
+# 💱Mekanisme pengambilan data dari JSON💱
+🔸 Mendefinisikan model *class* sesuai dengan *response data* yang akan diambil ketika melakukan pemanggilan *web service*.
+
+🔸 Membuat fungsi untuk melakukan *fetching* data dari *web service* kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan `FutureBuilder`.
+
+🔸 Setiap data di-*fetch* melalui HTTP GET *request* yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode `http.get`.
+
+🔸 *Response* tersebut akan dikonversi menjadi Dart object. Untuk setiap object tersebut akan dilakukan looping dan disimpan pada sebuah list. Selain itu, iterasi dari list tersebut digunakan untuk menampilkan data pada flutter.
+
+# 📌Pengimplementasian checklists dari tasks📌
+- Melakukan refactor file di dalam folder `lib` dengan membuat 3 (tiga) folder baru dengan nama `model`, `page`, dan `utility`. Proses ini dilakukan untuk meningkatkan keterbacaan, mengurangi kompleksitas kode, dan memudahkan proses `maintenance` ke depannya.
+
+- Memindahkan file `data.dart` dan `form.dart` ke dalam ke folder `page`, file `budget.dart` dipindahkan ke dalam folder `model`, dan `drawer.dart` dipindahkan ke dalam folder `utility`.
+
+- Membuat file baru pada folder `lib/model` dengan nama `mywatchlist.dart` berisi model MyWatchList yang disesuaikan dengan data JSON dari *web service*. Selain itu, menambahkan *keyword* `required` pada setiap parameter model pada bagian constructor.
+
+- Melakukan `flutter pub add http` pada terminal proyek Flutter untuk menambahkan package `http`.
+
+- Menambahkan kode berikut untuk memperbolehkan akses Internet pada aplikasi Flutter yang sedang dibuat pada file `android/app/src/main/AndroidManifest.xml`.
+
+- Membuat file baru pada folder `utility` dengan nama `fetch.dart` untuk melakukan pengambilan data dari URL http://tugas2-pbp-febidamanik.herokuapp.com/mywatchlist/json/ menggunakan metode `http.get`.
+
+- Membuat file baru pada folder `page` dengan nama `mywatchlist_page.dart` untuk menampilkan seluruh *title* dari objek MyWatchList pada halaman `My Watch List`.
+
+- Membuat file baru pada folder `page` dengan nama `mywatchlist_detail.dart` untuk menampilkan halaman detail untuk setiap mywatchlist yang ada pada daftar tersebut. Setiap detail akan menampilkan *release data*, *rating*, *status*, dan *review*.
+
+- Membuat halaman detail film dengan menggunakan `FutureBuilder` untuk menampilkan data yang telah dikonversi ke aplikasi.
+
+- Menambahkan kode berikut untuk menambahkan menu `My Watch List` pada file `drawer.dart` yang telah dibuat di bawah menu ListTile Data Budget.
+
+- Menambahkan tombol navigasi baru pada setiap film di halaman `My Watch List` yang akan mengarah ke halaman detail film jika diklik dengan bantuan widget ListTile dan *event handler* `onTap()` yang akan melakukan operasi `Navigator.push`.
+
+- Melakukan *restart* aplikasi dengan menekan tombol `r` pada terminal di tempat menjalankan Flutter.
+
+- Menjalankan proyek program Flutter dengan `flutter run` pada `cmd`.
+
+- Melakukan `add-commit-push` proyek ke repositori `pbp-flutter-lab`.
+
+**◻Tambahan Implementasi Bonus◻**
+
+◽ ✅ Menambahkan *checkbox* dengan widget CheckboxListTile untuk menandakan film tersebut sudah ditonton atau belum. 
+
+◽ ✔ Dengan menggunakan *event handler*, yaitu `onChanged()` akan melakukan operasi `setState()` untuk mengubah status ditonton yang dapat bernilai `true` atau `false` pada saat *checkbox* ditekan.
+
+◽ ✅ Menambahkan warna untuk *outline* pada setiap *mywatchlist* pada halaman *mywatchlist* berdasarkan status ditonton dua pilihan warna untuk status yang bernilai `true` akan berwarna `Colors.lightGreenAccent.shade400` sedangkan untuk status yang bernilai `false` `Colors.redAccent.shade400`.
+
+◽ ✔ Mengimplementasikan Card makeCard yang berisi data MyWatchList dan mengatur pewarnaan pada setiap *outline* sesuai dengan status film yang ditonton.
+
+◽ ✅ *Refactor* function *fetch* data dari *web service* ke sebuah file terpisah.
+
+◽ ✔ Membuat folder serta file baru, yaitu folder `utility` dan file `fetch.dart` serta menambahkan *import* pada file yang membutuhkan untuk melakukan *fetching* data dari *web service* kemudian menampilkannya ke aplikasi yang telah dibuat sebelumnya.
