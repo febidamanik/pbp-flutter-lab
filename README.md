@@ -114,16 +114,16 @@ Pada aplikasi counter_7, fungsi setState() berpengaruh pada variabel counter.
 </html>
 
 # 📌Pengimplementasian checklists dari tasks📌
-- Membuat aplikasi Flutter bernama counter_7
+- Membuat aplikasi Flutter bernama counter_7.
 ``` 
 flutter create counter_7
 cd counter_7
 ```
-- Mengubah title `Flutter Demo Home Page` menjadi `Program Counter`
+- Mengubah title `Flutter Demo Home Page` menjadi `Program Counter`.
 ```dart
 home: const MyHomePage(title: 'Program Counter'),
  ```
-- Membuat variabel pembantu di dalam function build
+- Membuat variabel pembantu di dalam function build.
 ```dart
 int _counter = 0;
 ```
@@ -432,17 +432,17 @@ Widget build(BuildContext context) => Drawer(
 # 🐱‍💻Widget yang digunakan di proyek beserta fungsinya🐱‍💻
 Berikut tambahan widget baru yang digunakan di proyek Tugas 9, yaitu :
 
-◽ `Checkbox` → Menampilkan *checkbox* untuk memberi pilihan kepada *user*.
+◽ `Checkbox` → Menampilkan *checkbox* untuk memberi pilihan kepada *user*
 
-◽ `ElevatedButton` → Membuat *button* memiliki *shadow* dan terlihat menonjol dibandingkan dengan elemen-elemen lainnya dengan desain material Elevation.
+◽ `ElevatedButton` → Membuat *button* memiliki *shadow* dan terlihat menonjol dibandingkan dengan elemen-elemen lainnya dengan desain material Elevation
 
-◽ `FutureBuilder` → Menampilkan data yang akan diambil dari *web service* yang mendukung proses asinkron.
+◽ `FutureBuilder` → Menampilkan data yang akan diambil dari *web service* yang mendukung proses asinkron
 
-◽ `Flexible` → Mengatur turunan *widget* agar tampilannya dapat diatur dan bersifat fleksibel pada halaman detail.
+◽ `Flexible` → Mengatur turunan *widget* agar tampilannya dapat diatur dan bersifat fleksibel pada halaman detail
 
-◽ `RichText` → Menampilkan teks yang menerapkan beberapa *style* yang bervariasi.
+◽ `RichText` → Menampilkan teks yang menerapkan beberapa *style* yang bervariasi
 
-◽ `TextSpan` → Menampung beberapa properti berupa *style* dan spesifikasi *style* lainnya untuk teks pada halaman detail.
+◽ `TextSpan` → Menampung beberapa properti berupa *style* dan spesifikasi *style* lainnya untuk teks pada halaman detail
 
 # 💱Mekanisme pengambilan data dari JSON💱
 🔸 Mendefinisikan model *class* sesuai dengan *response data* yang akan diambil ketika melakukan pemanggilan *web service*.
